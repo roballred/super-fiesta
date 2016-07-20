@@ -1,17 +1,109 @@
-<Placement>
-  <!-- Customize where the shapes are rendered -->
-
-  <!-- 
-  <Place Parts_Blogs_BlogArchives="Content:before"/>
-  <Place Parts_Blogs_RecentBlogPosts="Content:after"/>
-  <Match ContentType="Blog">
-    <Match DisplayType="Summary">
-      <Place Parts_Blogs_Blog_Description="Content:before"
-             Parts_Blogs_Blog_BlogPostCount="Meta:3"/>
+﻿<Placement>
+  <!--<Match Path="/">-->
+    <Place 
+      Parts_Tags_ShowTags="-"
+      Parts_Common_Metadata="-"
+      Parts_Contents_Publish="-"
+      Fields_TaxonomyField="-"
+      Parts_Autoroute_Edit="-"/>
+  <!--</Match>-->
+  <Place Parts_Roles_UserRoles_Edit="-"/>
+  <Place Fields_TaxonomyField_Edit-Categories="Content:before.6" />
+  
+  <Match Path="/">
+    <Match ContentType="Page">
+      <Place Parts_Title="-"/>
     </Match>
   </Match>
-  <Match Path="/About">
-    <Place Parts_Common_Metadata="-"/>
+  
+  <Match Path="/profile/*">
+    <Place Fields_Common_Text-Forname="-"
+           Fields_Common_Text-Surname="-"/>
   </Match>
--->
+  
+  <Match ContentType="Thread">
+    <Match DisplayType="SummaryFooter">
+      <Place Parts_Title_Summary="-"
+              Parts_Threads_Thread_ThreadReplyCount="-"
+              Forum_Metadata_First="-"
+              Forum_Metadata_Latest="-"
+              Parts_Common_Metadata_Summary="Meta:2;Alternate=WhosChatting"/>
+    </Match>
+    
+    <Match DisplayType="Detail">
+      <Place Fields_TaxonomyField-Tags="Meta:1"
+             Parts_Thread_Posts_Users="Meta:2"/>
+    </Match>
+  </Match>
+  
+  <Match ContentType="Post">
+    <Match DisplayType="Detail">
+      <Place Parts_Common_Metadata="Meta:1"/>
+    </Match>
+  </Match>
+  
+  <Match DisplayType="Detail">
+      <Place Parts_Threads_Post_Body_InlineEdit="Inline:1" 
+             Parts_Title_InlineEdit="Inline:1" 
+             Parts_Common_Body_InlineEdit="Inline:1"
+      />
+  </Match>
+  
+  
+  <!-- User Voice -->
+  <Match ContentType="UserVoiceForum">
+    <Match DisplayType="Detail">
+      <Place Parts_Common_Metadata="-"
+             Parts_Forums_Thread_List="Content"
+             Parts_Forums_Forum_Description="Meta:1"
+             Parts_Forum_Manage="Actions:1"/>
+    </Match>
+    <Match DisplayType="DetailAdmin">
+      <Place Parts_Forums_Thread_List_Admin="Content:5"
+             Parts_Forums_Forum_Manage="Actions"
+             Parts_Forums_Forum_Description="Actions:after"/>
+    </Match>
+    <Match DisplayType="Summary">
+      <Place Parts_Forums_Forum_Description="Content:before"
+             Parts_Forums_Forum_ForumReplyCount="Meta:3"
+             Parts_Forums_Forum_ForumThreadCount="Meta:4"/>
+    </Match>
+    <Match DisplayType="SummaryAdmin">
+      <Place Parts_Forums_Forum_SummaryAdmin="Actions:10"
+             Parts_Forums_Forum_Description="Content:before"/>
+    </Match>
+  </Match>
+
+  <Match ContentType="UserVoiceThread">
+    <Match DisplayType="Detail">
+      <Place Parts_Common_Metadata="-"
+             Parts_Thread_Manage="Actions:1"
+             Parts_Threads_Thread_Closed="Meta:1"/>
+    </Match>
+    <Match DisplayType="Summary">
+      <Place Parts_Threads_Thread_ThreadReplyCount="Meta:3"
+             Forum_Metadata_First="Content:after"
+             Forum_Metadata_Latest="Content:after"/>
+    </Match>
+    <Match DisplayType="SummaryAdmin">
+      <Place Parts_Threads_Thread_SummaryAdmin="Actions:10"
+             Parts_Threads_Thread_Metadata_SummaryAdmin="Meta:1.3"/>
+    </Match>
+
+    <Match DisplayType="Summary">
+      <Place Parts_VoteUpDown="PreHeader:1"/>
+      <Place Parts_VoteUpDown_Summary="-" />
+    </Match>
+  </Match>
+
+  <Match ContentType="UserVoicePost">
+    <Match DisplayType="Detail">
+      <Place Parts_Post_Manage="Actions:1"/>
+      <Place Parts_Common_Metadata="Meta:1"/>
+    </Match>
+    <Match DisplayType="SummaryAdmin">
+      <Place Parts_Thread_Post_Metadata_SummaryAdmin="Meta:1.2"/>
+    </Match>
+  </Match>
+
 </Placement>
