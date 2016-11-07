@@ -2,5 +2,13 @@
   {
     "outputFile": "Styles/Site.css",
     "inputFile": "Styles/Site.less"
+  },
+  {
+    "outputFile": "Styles/Rob.css",
+    "inputFile": "Styles/Rob.less"
+  },
+  {
+    "outputFile": "Styles/bab.css",
+    "inputFile": "Styles/bab.less"
   }
 ]

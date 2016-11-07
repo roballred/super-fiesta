@@ -1,9 +1,6 @@
-Name: WAA.theme
-Author: The Orchard Team
-Website: http://www.orchardproject.net
-Description: Description for the theme
+Name: Bootstrap Accessible Basetheme
+Author: Rob Allred
+Website: http://roballred.com
+Description: A base theme that uses bootstrap and is working towards wcag aa compliance
 Version: 1.0
-# todo: provide tags
-# Tags: Classic, Serif
-#BaseTheme: PJS.Bootstrap
 Zones: Header, Navigation, Featured, BeforeMain, AsideFirst, Messages, BeforeContent, Content, AfterContent, AsideSecond, AfterMain, TripelFirst, TripelSecond, TripelThird, FooterQuadFirst, FooterQuadSecond, FooterQuadThird, FooterQuadFourth, Footer

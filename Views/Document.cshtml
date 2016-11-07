@@ -1,0 +1,28 @@
+﻿
+@using Orchard.ContentManagement;
+@{
+
+    string title = Convert.ToString(Model.Title);
+    string siteName = Convert.ToString(WorkContext.CurrentSite.SiteName);
+    Style.Include("bab.css").AtHead();
+    Style.Include("site.css").AtHead();
+
+}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="index, follow, archive" />
+    <title>@Html.Title(title, siteName)</title>
+
+    @Display(Model.Head)
+
+</head>
+
+<body>
+    @Display(Model.Body)
+    @Display(Model.Tail)
+</body>
+</html>
