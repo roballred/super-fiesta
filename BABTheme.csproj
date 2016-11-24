@@ -130,9 +130,6 @@
     </None>
     <Content Include="packages.config" />
     <Content Include="Views\Layout.cshtml" />
-    <Content Include="Views\Menu.cshtml" />
-    <Content Include="Views\MenuItem.cshtml" />
-    <Content Include="Views\MenuItemLinkdd.cshtml" />
     <Content Include="Views\Document.cshtml" />
     <Content Include="Content\bootstrap\.csscomb.json" />
     <Content Include="Content\bootstrap\.csslintrc" />
